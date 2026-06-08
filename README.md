@@ -1,16 +1,42 @@
-# React + Vite
+# Exercise 4-404 React Hiking Trails
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend web application for displaying hiking trails, trail details, comments, and live weather updates.
 
-Currently, two official plugins are available:
+This project is part of the WMC Tasksheet Module 4 – 03: `Exercise_4_404_react_hiking_trails`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Home page with welcome message
+- Navigation with routes for:
+    - Home
+    - Trails
+    - Comments
+- Hiking trails list loaded from a REST backend
+- Trail detail page with:
+    - Name
+    - Region
+    - Description
+    - Image
+    - Duration, length, and intensity table
+- Comments overview
+- Trail-specific comments
+- Add new comments for a trail
+- Weather footer using WebSocket messages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- React Router
+- CSS
+- REST API
+- WebSocket
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Backend
+
+The backend is provided separately as `backend.bat`.
+
+It runs on:
+
+```txt
+http://localhost:8080
