@@ -16,7 +16,7 @@ function App() {
                     <Route index element={<Home />}/>
                     <Route path="trails" element={<Trails />}/>
                     <Route path="comments" element={<Comments />}/>
-                    <Route path="trailsDetails" element={<TrailsDetails />}/>
+                    <Route path="trails/:trailId/trailsDetails" element={<TrailsDetails />}/>
                 </Route>
             </Routes>
         </BrowserRouter>
