@@ -1,5 +1,6 @@
 import {useParams} from 'react-router-dom';
 import {useEffect, useState} from "react";
+import Comments from "./Comments.jsx";
 
 export default function TrailsDetails() {
 
@@ -53,23 +54,26 @@ export default function TrailsDetails() {
                     {trail.description}
                 </div>
                 <div className="row">
-                    <div className="offset-1 col-11">
+                    <div className="offset-1 col-10">
                         <table className="table table-bordered mt-2">
                             <thead>
                             <tr>
                                 <th>Duration (h)</th>
                                 <th>Length (km)</th>
-                                <th>Intensity (1-5</th>
+                                <th>Intensity (1-5)</th>
                             </tr>
                             </thead>
-                            <body>
+                            <tbody>
                             <tr>
                                 <td>{trail.duration}</td>
                                 <td>{trail.lengthInKm}</td>
                                 <td>{trail.intensity}</td>
                             </tr>
-                            </body>
+                            </tbody>
                         </table>
+                        <div>
+                            <Comments trailId={trailId} showForm />
+                        </div>
                     </div>
                 </div>
             </div>

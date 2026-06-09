@@ -1,3 +1,7 @@
 th {
     font-weight:bold;
 }
+
+.app-box {
+    min-height: 750px;
+}
