@@ -1,4 +1,5 @@
 import {Outlet, Link} from "react-router-dom" ;
+import WeatherFooter from "./WeatherFooter.jsx";
 
 export default function Layout() {
     return (
@@ -23,6 +24,7 @@ export default function Layout() {
                         </ul>
                     </nav>
                     <Outlet/>
+                    <WeatherFooter/>
                 </div>
             </div>
         </div>
