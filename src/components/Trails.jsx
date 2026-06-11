@@ -31,25 +31,43 @@ export default function Trails() {
     if (loading) return "Loading...";
     if (error) return "Error!";
 
+    const getIntensityColor = (intensity) => {
+        switch (intensity) {
+            case 3:
+            case 4:
+                return "warning";
+            case 5:
+                return "danger";
+            default:
+                return "white";
+        }
+    }
+
     return (
         <div className="container-fluid">
-            <div className="offset-1">
-                <h3 className="fw-bold">Trails:</h3>
+            <div className="row">
+                <div className="col-10 offset-1">
+                    <h3 className="fw-bold">Trails:</h3>
+                    <div className= "border border-2 border-dark">
+                        <ul className="list-unstyled">
+                            {trails.map((trail) => (
+                                <li key={trail.id}
+                                    className= {`bg-${getIntensityColor(trail.intensity)}`}
+                                >
+                                    <div className="row p-2">
+                                        <div className="col-7">
+                                            {trail.name} - {trail.region} - ({trail.intensity})
+                                        </div>
+                                        <div className="offset-3 col-2">
+                                            <Link to={`/trails/${trail.id}/trailsDetails`}>Show Details</Link>
+                                        </div>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <ul className="offset-1">
-                {trails.map((trail) => (
-                    <li key={trail.id}>
-                        <div className="row">
-                            <div className="col-6">
-                                {trail.name} - {trail.region} - ({trail.intensity})
-                            </div>
-                            <div className="offset-3 col-2">
-                                <Link to={`/trails/${trail.id}/trailsDetails`}>Show Details</Link>
-                            </div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
         </div>
     )
 }

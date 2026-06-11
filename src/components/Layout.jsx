@@ -4,8 +4,8 @@ export default function Layout() {
     return (
         <div className="container-fluid">
             <div className="row">
-                <div className="col-10 offset-1 border border-2 border-dark app-box mt-2 pt-2">
-                    <div>
+                <div className="col-10 offset-1 border border-2 border-dark app-box mt-2 p-0">
+                    <div className="title-box">
                         <h1> TrailsApp </h1>
                         <h2>Beautiful and exciting hikes</h2>
                     </div>

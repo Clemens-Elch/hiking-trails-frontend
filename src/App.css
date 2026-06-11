@@ -5,3 +5,10 @@ th {
 .app-box {
     min-height: 750px;
 }
+
+.title-box{
+    background-color: cornflowerblue;
+    padding-top: 20px;
+    color: white;
+    padding-bottom: 20px;
+}
